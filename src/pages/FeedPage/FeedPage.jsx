@@ -4,8 +4,8 @@ import UploadPicForm from "../../components/AddPostForm/AddPostForm";
 import PostGallery from "../../components/PostGallery/PostGallery";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../components/Loader/Loader";
-// import * as postsAPI from "../../utils/postApi";
-// import * as likesAPI from "../../utils/likeApi"
+import * as postsAPI from "../../utils/postApi";
+import * as likesAPI from "../../utils/likeApi"
 
 import { Grid } from "semantic-ui-react"
 
@@ -95,7 +95,7 @@ return (
         </Grid.Row>
         <Grid.Row>
             <Grid.Column style={{ maxWidth: 450 }}>
-                <AddPostForm handleUploadPic={handleUploadPic} />
+                <UploadPicForm handleUploadPic={handleUploadPic} />
             </Grid.Column>
         </Grid.Row>
             <Grid.Column style={{ maxWidth: 450 }}>

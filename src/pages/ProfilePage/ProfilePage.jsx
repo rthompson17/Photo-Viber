@@ -10,20 +10,20 @@ import userService from "../../utils/userService";
 import * as likesAPI from '../../utils/likeApi';
 
 import { useParams } from "react-router-dom";
-import user from "../../../models/user";
+// import user from "../../../models/user";
 
 export default function ProfilePage(props) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
-    cconst [user, setUser] = useState({});
-    const [posts, setPosts] = useStatee([]);
+    const [user, setUser] = useState({});
+    const [posts, setPosts] = useState([]);
     const { username } = useParams();
 
     async function addLike(postId){
         try {
             const data = await likesAPI.create(postId)
             console.log(data, ' <--- the server response when we make a like');
-            getPosts();
+            getProfile();
         }   catch(err){
             console.log(err)
             setError(err.message)
@@ -34,7 +34,7 @@ export default function ProfilePage(props) {
         try {
             const data = await likesAPI.removeLike(likeId);
             console.log(data, '<-- server response when we remove a like')
-            getPosts()
+            getProfile()
 
         }   catch(err){
             console.log(err);

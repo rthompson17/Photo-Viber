@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
+// SHOULD ENABLE A SWIPE RIGHT OR LEFT FOR ADD OR REMOVE LIKE
 
 function PostCard({ post, isProfile, removeLike, addLike, user }) {
     const likeIndex = post.likes.findIndex(

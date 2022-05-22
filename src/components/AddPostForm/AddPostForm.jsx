@@ -32,7 +32,7 @@ export default function UploadPicForm(props){
     return (
 
         <Grid textAlign='center' style={{ height: '25vh' }} verticalAlign='middle'>
-            <Gric.Column style={{ maxWidth: 450 }}>
+            <Grid.Column style={{ maxWidth: 450 }}>
                 <Segment>
 
                     <Form autoComplete="on" onSubmit={handleSubmit}>
@@ -60,7 +60,7 @@ export default function UploadPicForm(props){
                         </Button>
                     </Form>
                 </Segment>
-            </Gric.Column>
+            </Grid.Column>
         </Grid>
     )
 }
