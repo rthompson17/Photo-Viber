@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, Grid, Segment } from 'semantic-ui-react'
 
-export default function UploadProfilePicForm(props){
+export default function UploadPicForm(props){
     const [selectedFile, setSelectedFile] = useState('')
     const [state, setState] = useState({
         caption: ''
