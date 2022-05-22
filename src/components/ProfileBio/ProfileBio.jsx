@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React from "react";
 import { Image, Grid, Segment } from "semantic-ui-react";
 
 function ProfileBio({ user }) {
