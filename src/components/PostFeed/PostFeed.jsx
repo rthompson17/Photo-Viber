@@ -17,11 +17,11 @@ export default function PostFeed({posts, numPhotosCol, isProfile, loading }){
             ) : null}
             {posts.map((post) => {
                 return (
-                    <PostCard
+                  <PostCard
                     post={post}
                     key={post._id}
                     isProfile={isProfile}
-                    />
+                  />
                 );
             })}
         </Card.Group>

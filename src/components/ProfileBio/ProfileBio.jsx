@@ -11,7 +11,7 @@ function ProfileBio({ user }) {
                           user.photoUrl
                             ? user.photoUrl
                             : "https://react.semantic-ui.com/images/wireframe/square-image.png"
-                      }`}
+                      } `}
                       avatar
                       size="small"
                     />

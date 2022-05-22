@@ -17,14 +17,14 @@ export default function PostFeed({posts, numPhotosCol, isProfile, loading, addLi
             ) : null}
             {posts.map((post) => {
                 return (
-                    <PostCard
+                  <PostCard
                     post={post}
                     key={post._id}
                     isProfile={isProfile}
                     addLike={addLike}
                     removeLike={removeLike}
                     user={user}
-                    />
+                  />
                 );
             })}
         </Card.Group>

@@ -50,7 +50,6 @@ export default function ProfilePage(props) {
             setUser(() => data.user);
             setPosts(() => data.posts);
         }   catch (err) {
-            console.log(err);
             setError("Profile doesn't exist --- check terminal for express")
         }
     }

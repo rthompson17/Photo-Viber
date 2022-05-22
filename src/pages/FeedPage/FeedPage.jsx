@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PageHeader from "../../components/Header/Header";
-import UploadPicForm from "../../components/AddPostForm/AddPostForm";
+import UploadPicForm from "../../components/UploadPicForm/UploadPicForm";
 import PostGallery from "../../components/PostGallery/PostGallery";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../components/Loader/Loader";
@@ -52,17 +52,18 @@ export default function Feed({user, handleLogout}) {
         }
     }
 
-    async function getPosts() {
-        try {
-            const data = await postsAPI.getAll();
-            console.log(data);
-            setPosts([...data.posts]);
-            setLoading(false);
-        }   catch (err) {
-            console.log(err.message, " this is the error");
-            setError(err.message);
-        }
+   // R read in crud
+   async function getPosts() {
+    try {
+      const data = await postsAPI.getAll();
+      console.log(data, " this is data,");
+      setPosts([...data.posts]);
+      setLoading(false);
+    } catch (err) {
+      console.log(err.message, " this is the error");
+      setError(err.message);
     }
+  }
 
     useEffect(() => {
         getPosts();

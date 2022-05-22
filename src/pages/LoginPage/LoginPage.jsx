@@ -87,6 +87,6 @@ export default function LoginPage(props) {
             {error ? <ErrorMessage error={error} /> : null}
         </Grid.Column>
       </Grid>
-      </>
+    </>
   );
 }

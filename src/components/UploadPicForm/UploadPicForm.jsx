@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, Grid, Segment } from 'semantic-ui-react'
 
-export default function UploadPicForm(props){
+export default function UploadProfilePicForm(props){
     const [selectedFile, setSelectedFile] = useState('')
     const [state, setState] = useState({
         caption: ''
@@ -25,7 +25,7 @@ export default function UploadPicForm(props){
         const formData = new FormData()
         formData.append('photo', selectedFile)
         formData.append('caption', state.caption)
-        props.handleAddPost(formData);
+        props.handleUploadPic(formData);
 
     }
 
@@ -35,7 +35,7 @@ export default function UploadPicForm(props){
             <Grid.Column style={{ maxWidth: 450 }}>
                 <Segment>
 
-                    <Form autoComplete="on" onSubmit={handleSubmit}>
+                    <Form autoComplete="off" onSubmit={handleSubmit}>
 
                         <Form.Input
                             className="form-control"
@@ -44,7 +44,7 @@ export default function UploadPicForm(props){
                             placeholder="Write your photo caption here"
                             onChange={handleChange}
                             required
-                            />
+                        />
                         <Form.Input
                             className="form-control"
                             type="file"
@@ -62,5 +62,5 @@ export default function UploadPicForm(props){
                 </Segment>
             </Grid.Column>
         </Grid>
-    )
+    );
 }

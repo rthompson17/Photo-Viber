@@ -19,7 +19,7 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
     return (
         <Card key={post._id} raised>
             {isProfile ? (
-                ""
+              ""
             ) : (
               <Card.Content textAlign="left">
                   <Card.Header>
