@@ -8,7 +8,7 @@ export default function LoginPage(props) {
     <>
       <h1>Setup Login Page</h1>
       <ul>
-        <li>Read the Login Model, You can change it to fit your needs</li>
+        <li>TEST !!!!! Read the Login Model, You can change it to fit your needs</li>
         <li>
           Make sure you read the Login func in the User Controller, to know how
           it is setup to find the user!
