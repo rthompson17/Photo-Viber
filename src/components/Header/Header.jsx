@@ -16,13 +16,13 @@ export default function PageHeader({ user, handleLogout }) {
           </Header>
           <Header as="h2" floated="left">
             <Link to={`/${user?.username}`}>
-                <Image
+                <Image width="100px"
                 src={
                     user?.photoUrl
                         ? user?.photoUrl
                         : "https://react.semantic-ui.com/images/wireframe/square-image.png"
                 }
-                avatar
+                
               ></Image>
             </Link>
           </Header>

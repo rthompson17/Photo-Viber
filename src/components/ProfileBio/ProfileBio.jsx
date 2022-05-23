@@ -13,7 +13,7 @@ function ProfileBio({ user }) {
                             : "https://react.semantic-ui.com/images/wireframe/square-image.png"
                       } `}
                       avatar
-                      size="small"
+                      size="medium"
                     />
                 </Grid.Column>
                 <Grid.Column textAlign="left" style={{ maxWidth: 450 }}>
