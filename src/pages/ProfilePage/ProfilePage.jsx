@@ -5,6 +5,7 @@ import Loading from "../../components/Loader/Loader";
 import ProfileBio from "../../components/ProfileBio/ProfileBio";
 import PostGallery from "../../components/PostGallery/PostGallery";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import { Button } from 'react-bootstrap';
 
 import userService from "../../utils/userService";
 import * as likesAPI from '../../utils/likeApi';
