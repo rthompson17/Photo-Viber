@@ -6,6 +6,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import FeedPage from '../FeedPage/FeedPage'; 
 import ProfilePage from '../ProfilePage/ProfilePage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [user, setUser] = useState(userService.getUser()) // getUser decodes our JWT token, into a javascript object
