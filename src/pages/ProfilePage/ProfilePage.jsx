@@ -5,7 +5,10 @@ import Loading from "../../components/Loader/Loader";
 import ProfileBio from "../../components/ProfileBio/ProfileBio";
 import PostFeed from "../../components/PostFeed/PostFeed";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import AddPostForm from "../../components/AddPostForm/AddPostForm";
 import { Button } from 'react-bootstrap';
+import * as postsAPI from "../../utils/postApi";
+
 
 import userService from "../../utils/userService";
 import * as likesAPI from '../../utils/likeApi';
@@ -42,6 +45,20 @@ export default function ProfilePage(props) {
             setError(err.message);
         }
     }
+
+    async function handleAddPost(post) {
+      try {
+          setLoading(true);
+          const data = await postsAPI.create(post);
+
+          console.log(data, " this is response from the server, in handleAddpost");
+          setPosts([data.post, ...posts]);
+          setLoading(false);
+      }   catch (err) {
+          console.log(err);
+          setError(err.message);
+      }
+  }
 
     async function getProfile() {
         try {
@@ -85,10 +102,17 @@ export default function ProfilePage(props) {
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column>
+          <Grid.Column>
               <ProfileBio user={user} />
             </Grid.Column>
           </Grid.Row>
+          <Grid.Row>
+            <Grid.Column style={{ maxWidth: 450 }}>
+                <AddPostForm handleAddPost={handleAddPost} />
+            </Grid.Column>
+        </Grid.Row>
+        <Grid.Row><br></br></Grid.Row>
+        <Grid.Row><br></br></Grid.Row>
           <Grid.Row centered>
             <Grid.Column style={{ maxWidth: 750 }}>
             <PostFeed

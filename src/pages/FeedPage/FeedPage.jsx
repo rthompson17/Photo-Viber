@@ -100,11 +100,6 @@ return (
             </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-            <Grid.Column style={{ maxWidth: 450 }}>
-                <AddPostForm handleAddPost={handleAddPost} />
-            </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
             {/* TINDER EXAMPLE START */}
              <div className='app'>
              {showAdvanced ? <Advanced /> : <Simple />}
