@@ -7,7 +7,7 @@ const likesSchema = mongoose.Schema({
 
 const postSchema = new mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-    photoURL: String,
+    photoUrl: String,
     caption: String,
     likes: [likesSchema]
 })

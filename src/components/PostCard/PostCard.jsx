@@ -28,12 +28,12 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
                             size="large"
                             avatar
                             src={
-                              post.user.photoUrl
+                              post.user?.photoUrl
                                 ? post.user.photoUrl
                                 : "https://react.semantic-ui.com/images/wireframe/square-image.png"
                             }
                           />
-                          {post.user.username}
+                          {post.user?.username}
                       </Link>
                   </Card.Header>
               </Card.Content>

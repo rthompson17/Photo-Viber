@@ -16,6 +16,7 @@ function create(req, res){
         const params = {Bucket: process.env.BUCKET_NAME, Key: filePath, Body: req.file.buffer};
         s3.upload(params, async function(err, data){
             console.log(err, ' this is from aws')
+            console.log(data, ' this is from aws')
             const post = await Post.create({caption: req.body.caption, user: req.user, photoUrl: data.Location});
             console.log(post)
 
@@ -30,11 +31,14 @@ function create(req, res){
     }
 }
 
-async function index(req, res){
-    try {
-        const posts = await Post.find({}).populate('user').exec()
-        res.status(200).json({posts})
-    } catch(err){
-        
-    }
-}
+async function index(req, res) {
+	try {
+	  // this populates the user when you find the posts
+	  // so you'll have access to the users information
+	  // when you fetch teh posts
+	  const posts = await Post.find({}).populate("user").exec();
+	  res.status(200).json({ posts: posts });
+	} catch (err) {
+	  res.status(400).json({ err });
+	}
+  }
