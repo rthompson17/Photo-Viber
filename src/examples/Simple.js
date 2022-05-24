@@ -2,9 +2,6 @@ import React, { useState } from 'react'
 // import TinderCard from '../react-tinder-card/index'
 import TinderCard from 'react-tinder-card'
 
-// SHOULD ENABLE A SWIPE RIGHT OR LEFT FOR ADD OR REMOVE LIKE
-
-
 const db = [
   {
     name: 'Richard Hendricks',

@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import PostFeed from "../../components/PostFeed/PostFeed";
+
 // import TinderCard from '../react-tinder-card/index'
 import TinderCard from 'react-tinder-card'
 
@@ -6,26 +8,7 @@ import TinderCard from 'react-tinder-card'
 
 
 const db = [
-  {
-    name: 'Richard Hendricks',
-    url: './img/richard.jpg'
-  },
-  {
-    name: 'Erlich Bachman',
-    url: './img/erlich.jpg'
-  },
-  {
-    name: 'Monica Hall',
-    url: './img/monica.jpg'
-  },
-  {
-    name: 'Jared Dunn',
-    url: './img/jared.jpg'
-  },
-  {
-    name: 'Dinesh Chugtai',
-    url: './img/dinesh.jpg'
-  }
+  {posts}
 ]
 
 function Simple () {

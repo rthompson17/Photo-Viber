@@ -4,6 +4,11 @@ import AddPostForm from "../../components/AddPostForm/AddPostForm";
 import PostFeed from "../../components/PostFeed/PostFeed";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../components/Loader/Loader";
+import Switch from 'react-ios-switch'
+import Advanced from '../../examples/Advanced'
+import showAdvanced from '../../examples/Advanced'
+import setShowAdvanced from '../../examples/Advanced'
+import Simple from '../../examples/Simple'
 import * as postsAPI from "../../utils/postApi";
 import * as likesAPI from "../../utils/likeApi"
 
@@ -98,6 +103,18 @@ return (
             <Grid.Column style={{ maxWidth: 450 }}>
                 <AddPostForm handleAddPost={handleAddPost} />
             </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+            {/* TINDER EXAMPLE START */}
+        return (
+             <div className='app'>
+             {showAdvanced ? <Advanced /> : <Simple />}
+             <div className='row'>
+              <p style={{ color: '#fff' }}>Show advanced example</p> <Switch checked={showAdvanced} onChange={setShowAdvanced} />
+             </div>
+            </div>
+        )
+                    {/* TINDER EXAMPLE END */}
         </Grid.Row>
         <Grid.Row>
             <Grid.Column style={{ maxWidth: 450 }}>
