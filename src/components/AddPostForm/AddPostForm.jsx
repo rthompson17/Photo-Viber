@@ -25,7 +25,7 @@ export default function UploadProfilePicForm(props){
         const formData = new FormData()
         formData.append('photo', selectedFile)
         formData.append('caption', state.caption)
-        props.handleUploadPic(formData);
+        props.handleAddPost(formData);
 
     }
 

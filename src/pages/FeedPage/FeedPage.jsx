@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PageHeader from "../../components/Header/Header";
-import UploadPicForm from "../../components/UploadPicForm/UploadPicForm";
+import AddPostForm from "../../components/AddPostForm/AddPostForm";
 import PostFeed from "../../components/PostFeed/PostFeed";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../components/Loader/Loader";
@@ -38,12 +38,12 @@ export default function Feed({user, handleLogout}) {
         }
     }
 
-    async function handleUploadPic(post) {
+    async function handleAddPost(post) {
         try {
             setLoading(true);
             const data = await postsAPI.create(post);
 
-            console.log(data, " this is response from the server, in handleUploadPic");
+            console.log(data, " this is response from the server, in handleAddpost");
             setPosts([data.post, ...posts]);
             setLoading(false);
         }   catch (err) {
@@ -96,13 +96,14 @@ return (
         </Grid.Row>
         <Grid.Row>
             <Grid.Column style={{ maxWidth: 450 }}>
-                <UploadPicForm handleUploadPic={handleUploadPic} />
+                <AddPostForm handleAddPost={handleAddPost} />
             </Grid.Column>
         </Grid.Row>
+        <Grid.Row>
             <Grid.Column style={{ maxWidth: 450 }}>
                 <PostFeed
                   posts={posts}
-                  numPhotosCol={1}
+                  numPhotosCol={2}
                   isProfile={false}
                   loading={loading}
                   addLike={addLike}
@@ -110,6 +111,7 @@ return (
                   user={user}
                 />
             </Grid.Column>
+        </Grid.Row>
     </Grid>
   );
 }
