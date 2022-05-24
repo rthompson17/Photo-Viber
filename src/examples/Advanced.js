@@ -1,6 +1,8 @@
 import React, { useState, useMemo, useRef } from 'react'
 // import TinderCard from '../react-tinder-card/index'
 import TinderCard from 'react-tinder-card'
+import { Link } from "react-router-dom";
+import { Image } from "semantic-ui-react";
 
 const db = [
   {
@@ -86,8 +88,9 @@ function Advanced () {
       <link
         href='https://fonts.googleapis.com/css?family=Alatsi&display=swap'
         rel='stylesheet'
-      />
+      /><br></br><br></br>
       <h1>React Tinder Card</h1>
+      <br></br>
       <div className='cardContainer'>
         {db.map((character, index) => (
           <TinderCard
