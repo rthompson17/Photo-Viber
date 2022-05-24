@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PageHeader from "../../components/Header/Header";
 import UploadPicForm from "../../components/UploadPicForm/UploadPicForm";
-import PostGallery from "../../components/PostGallery/PostGallery";
+import PostFeed from "../../components/PostFeed/PostFeed";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../components/Loader/Loader";
 import * as postsAPI from "../../utils/postApi";
@@ -100,7 +100,7 @@ return (
             </Grid.Column>
         </Grid.Row>
             <Grid.Column style={{ maxWidth: 450 }}>
-                <PostGallery
+                <PostFeed
                   posts={posts}
                   numPhotosCol={1}
                   isProfile={false}

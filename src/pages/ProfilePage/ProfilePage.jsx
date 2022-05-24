@@ -3,7 +3,7 @@ import { Grid } from "semantic-ui-react";
 import PageHeader from "../../components/Header/Header";
 import Loading from "../../components/Loader/Loader";
 import ProfileBio from "../../components/ProfileBio/ProfileBio";
-import PostGallery from "../../components/PostGallery/PostGallery";
+import PostFeed from "../../components/PostFeed/PostFeed";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { Button } from 'react-bootstrap';
 
@@ -91,7 +91,7 @@ export default function ProfilePage(props) {
           </Grid.Row>
           <Grid.Row centered>
             <Grid.Column style={{ maxWidth: 750 }}>
-            <PostGallery
+            <PostFeed
                 isProfile={true}
                 posts={posts}
                 numPhotosCol={3}
