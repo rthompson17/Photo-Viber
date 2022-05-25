@@ -5,10 +5,10 @@ import PostFeed from "../../components/PostFeed/PostFeed";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../components/Loader/Loader";
 import Switch from 'react-ios-switch'
-import Advanced from '../../examples/Advanced'
-import showAdvanced from '../../examples/Advanced'
-import setShowAdvanced from '../../examples/Advanced'
-import Simple from '../../examples/Simple'
+import Advanced from '../../components/examples/Advanced'
+import showAdvanced from '../../components/examples/Advanced'
+import setShowAdvanced from '../../components/examples/Advanced'
+import Simple from '../../components/examples/Simple'
 import * as postsAPI from "../../utils/postApi";
 import * as likesAPI from "../../utils/likeApi"
 
@@ -113,7 +113,7 @@ return (
             <Grid.Column style={{ maxWidth: 450 }}>
                 <PostFeed
                   posts={posts}
-                  numPhotosCol={2}
+                  numPhotosCol={1}
                   isProfile={false}
                   loading={loading}
                   addLike={addLike}
