@@ -102,7 +102,7 @@ return (
         <Grid.Row>
             {/* TINDER EXAMPLE START */}
              <div className='app'>
-             {showAdvanced ? <Advanced /> : <Simple />}
+             {showAdvanced ? <Advanced posts={posts}/> : <Simple />}
              <div className='row'>
               <p style={{ color: '#fff' }}>Show advanced example</p> <Switch checked={showAdvanced} onChange={setShowAdvanced} />
              </div>

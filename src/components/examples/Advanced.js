@@ -4,38 +4,41 @@ import TinderCard from 'react-tinder-card'
 import { Link } from "react-router-dom";
 import { Image } from "semantic-ui-react";
 
-const db = [
-  {
-    name: 'Richard Hendricks',
-    url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470'
-  },
-  {
-    name: 'Erlich Bachman',
-    url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470'
-  },
-  {
-    name: 'Monica Hall',
-    url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470'
-  },
-  {
-    name: 'Jared Dunn',
-    url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470'
-  },
-  {
-    name: 'Dinesh Chugtai',
-    url: './img/dinesh.jpg'
-  }
-]
+// const posts = 
+// // need to map through the photoUrl from posts model//
+// [
+//   {
+//     name: 'Richard Hendricks',
+//     url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fposts8MHxwaG90by1wYWdlfHx8fGVufposts8fHx8&auto=format&fit=crop&w=1470'
+//   },
+//   {
+//     name: 'Erlich Bachman',
+//     url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fposts8MHxwaG90by1wYWdlfHx8fGVufposts8fHx8&auto=format&fit=crop&w=1470'
+//   },
+//   {
+//     name: 'Monica Hall',
+//     url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fposts8MHxwaG90by1wYWdlfHx8fGVufposts8fHx8&auto=format&fit=crop&w=1470'
+//   },
+//   {
+//     name: 'Jared Dunn',
+//     url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fposts8MHxwaG90by1wYWdlfHx8fGVufposts8fHx8&auto=format&fit=crop&w=1470'
+//   },
+//   {
+//     name: 'Dinesh Chugtai',
+//     url: 'https://images.unsplash.com/photo-1577017040065-650ee4d43339?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fposts8MHxwaG90by1wYWdlfHx8fGVufposts8fHx8&auto=format&fit=crop&w=1170'
+//   }
+// ]
 
-function Advanced () {
-  const [currentIndex, setCurrentIndex] = useState(db.length - 1)
+//posts comes from FeedPage
+function Advanced ({posts}) {
+  const [currentIndex, setCurrentIndex] = useState(posts.length - 1)
   const [lastDirection, setLastDirection] = useState()
   // used for outOfFrame closure
   const currentIndexRef = useRef(currentIndex)
 
   const childRefs = useMemo(
     () =>
-      Array(db.length)
+      Array(posts.length)
         .fill(0)
         .map((i) => React.createRef()),
     []
@@ -46,7 +49,7 @@ function Advanced () {
     currentIndexRef.current = val
   }
 
-  const canGoBack = currentIndex < db.length - 1
+  const canGoBack = currentIndex < posts.length - 1
 
   const canSwipe = currentIndex >= 0
 
@@ -66,7 +69,7 @@ function Advanced () {
   }
 
   const swipe = async (dir) => {
-    if (canSwipe && currentIndex < db.length) {
+    if (canSwipe && currentIndex < posts.length) {
       await childRefs[currentIndex].current.swipe(dir) // Swipe the card!
     }
   }
@@ -92,7 +95,7 @@ function Advanced () {
       <h1>React Tinder Card</h1>
       <br></br>
       <div className='cardContainer'>
-        {db.map((character, index) => (
+        {posts.map((character, index) => (
           <TinderCard
             ref={childRefs[index]}
             className='swipe'
@@ -101,18 +104,18 @@ function Advanced () {
             onCardLeftScreen={() => outOfFrame(character.name, index)}
           >
             <div
-              style={{ backgroundImage: 'url(' + character.url + ')' }}
+              style={{ backgroundImage: 'url(' + character.photoUrl + ')' }}
               className='card'
             >
-              <h3>{character.name}</h3>
+              <h3>{character.user.username}</h3>
             </div>
           </TinderCard>
         ))}
       </div>
       <div className='buttons'>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')}>Swipe left!</button>
-        <button style={{ backgroundColor: !canGoBack && '#c3c4d3' }} onClick={() => goBack()}>Undo swipe!</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>Swipe right!</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')}>NAY</button>
+        <button style={{ backgroundColor: !canGoBack && '#c3c4d3' }} onClick={() => goBack()}>Undo</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>BAE</button>
       </div>
       {lastDirection ? (
         <h2 key={lastDirection} className='infoText'>
