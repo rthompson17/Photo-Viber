@@ -1,33 +1,6 @@
 import React, { useState, useMemo, useRef } from 'react'
-// import TinderCard from '../react-tinder-card/index'
 import TinderCard from 'react-tinder-card'
-import { Link } from "react-router-dom";
-import { Image } from "semantic-ui-react";
 
-// const posts = 
-// // need to map through the photoUrl from posts model//
-// [
-//   {
-//     name: 'Richard Hendricks',
-//     url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fposts8MHxwaG90by1wYWdlfHx8fGVufposts8fHx8&auto=format&fit=crop&w=1470'
-//   },
-//   {
-//     name: 'Erlich Bachman',
-//     url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fposts8MHxwaG90by1wYWdlfHx8fGVufposts8fHx8&auto=format&fit=crop&w=1470'
-//   },
-//   {
-//     name: 'Monica Hall',
-//     url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fposts8MHxwaG90by1wYWdlfHx8fGVufposts8fHx8&auto=format&fit=crop&w=1470'
-//   },
-//   {
-//     name: 'Jared Dunn',
-//     url: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fposts8MHxwaG90by1wYWdlfHx8fGVufposts8fHx8&auto=format&fit=crop&w=1470'
-//   },
-//   {
-//     name: 'Dinesh Chugtai',
-//     url: 'https://images.unsplash.com/photo-1577017040065-650ee4d43339?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fposts8MHxwaG90by1wYWdlfHx8fGVufposts8fHx8&auto=format&fit=crop&w=1170'
-//   }
-// ]
 
 //posts comes from FeedPage
 function Advanced ({posts}) {
@@ -112,6 +85,7 @@ function Advanced ({posts}) {
           </TinderCard>
         ))}
       </div>
+      <br></br>
       <div className='buttons'>
         <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')}>NAY</button>
         <button style={{ backgroundColor: !canGoBack && '#c3c4d3' }} onClick={() => goBack()}>Undo</button>

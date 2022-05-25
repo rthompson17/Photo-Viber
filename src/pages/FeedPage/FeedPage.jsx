@@ -104,13 +104,15 @@ return (
              <div className='app'>
              {showAdvanced ? <Advanced posts={posts}/> : <Simple />}
              <div className='row'>
-              <p style={{ color: '#fff' }}>Show advanced example</p> <Switch checked={showAdvanced} onChange={setShowAdvanced} />
+              <p style={{ color: '#fff' }}>Show advanced example</p> 
+              <Switch checked={showAdvanced} onChange={setShowAdvanced} 
+              />
              </div>
             </div>
                     {/* TINDER EXAMPLE END */}
         </Grid.Row>
         <Grid.Row>
-            <Grid.Column style={{ maxWidth: 450 }}>
+            {/* <Grid.Column style={{ maxWidth: 450 }}>
                 <PostFeed
                   posts={posts}
                   numPhotosCol={1}
@@ -120,7 +122,7 @@ return (
                   removeLike={removeLike}
                   user={user}
                 />
-            </Grid.Column>
+            </Grid.Column> */}
         </Grid.Row>
     </Grid>
   );
