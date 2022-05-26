@@ -53,6 +53,9 @@ function Advanced ({posts}) {
     const newIndex = currentIndex + 1
     updateCurrentIndex(newIndex)
     await childRefs[newIndex].current.restoreCard()
+
+  
+  
   }
 
   return (
@@ -87,14 +90,14 @@ function Advanced ({posts}) {
       </div>
       <br></br>
       <div className='buttons'>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')}>DON'T USE</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>&#128293;</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>AWW</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>&#128520;</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>BAE</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')} title="Don't Use">&#x274C;</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Hot">&#128293;</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Aww">&#128522;</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Good Trouble">&#128520;</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Bae">&#128141;</button>
       </div>
       <div className='buttons2'>
-        <button style={{ backgroundColor: !canGoBack && '#c3c4d3' }} onClick={() => goBack()}>Undo</button>
+        <button style={{ backgroundColor: !canGoBack && '#bfc3f0' }} onClick={() => goBack()}>Undo Swipe</button>
       </div>
       {lastDirection ? (
         <h2 key={lastDirection} className='infoText'>
@@ -102,7 +105,7 @@ function Advanced ({posts}) {
         </h2>
       ) : (
         <h2 className='infoText'>
-          Swipe a card or press a button to get Restore Card button visible!
+          Swipe a card or press a button!
         </h2>
       )}
     </div>

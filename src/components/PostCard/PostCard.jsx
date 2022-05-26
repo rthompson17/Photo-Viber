@@ -54,8 +54,7 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
             <Icon
                 name={"heart"}
                 size="large"
-                color={likeColor}
-                onClick={clickHandler}
+                color={likeColor} onClick={clickHandler}
             />
             {post.likes.length}
             </Card.Content>
