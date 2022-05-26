@@ -41,7 +41,7 @@ export default function UploadProfilePicForm(props){
                             className="form-control"
                             name="caption"
                             value={state.caption}
-                            placeholder="Write your photo caption here"
+                            placeholder="Upload your best photos!"
                             onChange={handleChange}
                             required
                         />

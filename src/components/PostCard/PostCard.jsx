@@ -10,11 +10,12 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
     );
 
     const clickHandler = 
-      likeIndex > -1
+      likeIndex > 1
         ? () => removeLike(post.likes[likeIndex]._id)
         : () => addLike(post._id);
 
-    const likeColor = likeIndex > -1 ? "red" : "grey";
+    const likeColor = likeIndex > -1 ? "orange" : "grey";
+    // const likeColor2 = likeIndex > 5 ? "red" : "grey";
 
     return (
         <Card key={post._id} raised>
@@ -41,16 +42,22 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
 
             <Image src={`${post.photoUrl}`} wrapped ui={false} />
             <Card.Content>
-                <Card.Description>{post.caption}</Card.Description>
+                <Card.Description >{post.caption}</Card.Description>
             </Card.Content>
             <Card.Content extra textAlign={"right"}>
                 <Icon
+                name={"gripfire"}
+                size="large"
+                color={likeColor}
+                onClick={clickHandler}
+            />
+            <Icon
                 name={"heart"}
                 size="large"
                 color={likeColor}
                 onClick={clickHandler}
             />
-            {post.likes.length} Likes
+            {post.likes.length}
             </Card.Content>
         </Card>
     );

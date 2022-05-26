@@ -102,9 +102,9 @@ export default function ProfilePage(props) {
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-          <Grid.Column>
+          {/* <Grid.Column>
               <ProfileBio user={user} />
-            </Grid.Column>
+            </Grid.Column> */}
           </Grid.Row>
           <Grid.Row>
             <Grid.Column style={{ maxWidth: 450 }}>
@@ -118,7 +118,7 @@ export default function ProfilePage(props) {
             <PostFeed
                 isProfile={true}
                 posts={posts}
-                numPhotosCol={3}
+                numPhotosCol={5}
                 user={props.user}
                 addLike={addLike}
                 removeLike={removeLike}
