@@ -150,6 +150,21 @@ h2 {
   box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.10);
 }
 
+.buttons2 button {
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  background-color: #2fa492;
+  transition: 200ms;
+  margin: 0 10px;
+  font-weight: bolder;
+  width: 160px;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.10);
+}
+
 .buttons button:hover {
   transform: scale(1.05);
 }
