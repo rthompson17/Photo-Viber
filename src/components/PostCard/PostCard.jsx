@@ -14,7 +14,7 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
         ? () => removeLike(post.likes[likeIndex]._id)
         : () => addLike(post._id);
 
-    const likeColor = likeIndex > -1 ? "orange" : "grey";
+    const likeColor = likeIndex > -1 ? "red" : "grey";
     // const likeColor2 = likeIndex > 5 ? "red" : "grey";
 
     return (
@@ -22,7 +22,7 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
             {isProfile ? (
               ""
             ) : (
-              <Card.Content textAlign="left">
+              <Card.Content textAlign="left" margin="50px">
                   <Card.Header>
                       <Link to={`/${post.user.username}`}>
                           <Image
@@ -45,12 +45,12 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
                 <Card.Description >{post.caption}</Card.Description>
             </Card.Content>
             <Card.Content extra textAlign={"right"}>
-                <Icon
+                {/* <Icon
                 name={"gripfire"}
                 size="large"
                 color={likeColor}
                 onClick={clickHandler}
-            />
+            /> */}
             <Icon
                 name={"heart"}
                 size="large"

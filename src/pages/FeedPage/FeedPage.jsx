@@ -111,17 +111,17 @@ return (
                     {/* TINDER EXAMPLE END */}
         </Grid.Row>
         <Grid.Row>
-            {/* <Grid.Column style={{ maxWidth: 450 }}>
+            <Grid.Column style={{ maxWidth: 500 }}>
                 <PostFeed
                   posts={posts}
-                  numPhotosCol={1}
+                  numPhotosCol={5}
                   isProfile={false}
                   loading={loading}
                   addLike={addLike}
                   removeLike={removeLike}
                   user={user}
                 />
-            </Grid.Column> */}
+            </Grid.Column>
         </Grid.Row>
     </Grid>
   );
