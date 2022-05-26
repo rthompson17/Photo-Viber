@@ -118,7 +118,7 @@ export default function ProfilePage(props) {
             <PostFeed
                 isProfile={true}
                 posts={posts}
-                numPhotosCol={5}
+                numPhotosCol={3}
                 user={props.user}
                 addLike={addLike}
                 removeLike={removeLike}

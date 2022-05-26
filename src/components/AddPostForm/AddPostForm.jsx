@@ -33,30 +33,28 @@ export default function UploadProfilePicForm(props){
 
         <Grid textAlign='center' style={{ height: '25vh' }} verticalAlign='middle'>
             <Grid.Column style={{ maxWidth: 450 }}>
-                <Segment>
-
+                 <Segment>
                     <Form autoComplete="off" onSubmit={handleSubmit}>
-
                         <Form.Input
-                            className="form-control"
-                            name="caption"
-                            value={state.caption}
-                            placeholder="Upload your best photos!"
-                            onChange={handleChange}
-                            required
-                        />
-                        <Form.Input
-                            className="form-control"
+                            className="form-group"
                             type="file"
                             name="photo"
-                            pllaceholder="upload image"
+                            label="NEW PHOTO TEST"
+                            placeholder="upload image"
                             onChange={handleFileInput}
                         />
+                        {/* <Form.Input
+                            className="form-group"
+                            name="caption"
+                            // value={state.caption}
+                            // placeholder="Upload your best photos!"
+                            onChange={handleChange}
+                        /> */}
                         <Button
                             type="submit"
                             className="btn"
                         >
-                            Add Profile Pic
+                            Add Photo
                         </Button>
                     </Form>
                 </Segment>
