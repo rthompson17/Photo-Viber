@@ -100,14 +100,13 @@ return (
             </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-            {/* TINDER EXAMPLE START */}
              <div className='app'>
              {showAdvanced ? <Advanced posts={posts}/> : <Simple />}
-             <div className='row'>
+             {/* <div className='row'>
               <p style={{ color: '#fff' }}>Show advanced example</p> 
               <Switch checked={showAdvanced} onChange={setShowAdvanced} 
               />
-             </div>
+             </div> */}
             </div>
                     {/* TINDER EXAMPLE END */}
         </Grid.Row>

@@ -65,7 +65,7 @@ function Advanced ({posts}) {
         href='https://fonts.googleapis.com/css?family=Alatsi&display=swap'
         rel='stylesheet'
       /><br></br><br></br>
-      <h1>React Tinder Card</h1>
+      <h1>Photo Feedback</h1>
       <br></br>
       <div className='cardContainer'>
         {posts.map((character, index) => (
