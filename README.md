@@ -28,15 +28,19 @@ Users can see how many "likes" they've received on each image. This will later b
 - Express
 - React
 - Node
+- Javascript
+- HTML
+- CSS
+- Semantic UI
 
 
 # Next Steps
-This app is currently a work in progress. Future modifications include:
+This app is currently a work in progress! Future modifications include:
 
 - Enabling full functionality of the swipe feature
 - Breaking down the review options into more detailed feedback on each image
 - Creating a social or chat element to the app so that users can communicate with one another
-- Possibly expanding the app's functionality into a dating app
+- Possibly expanding the app's functionality into a full dating app
 
 
 # Photography Attribution

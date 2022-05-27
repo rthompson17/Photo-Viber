@@ -45,12 +45,7 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
                 <Card.Description >{post.caption}</Card.Description>
             </Card.Content>
             <Card.Content extra textAlign={"right"}>
-                {/* <Icon
-                name={"gripfire"}
-                size="large"
-                color={likeColor}
-                onClick={clickHandler}
-            /> */}
+              
             <Icon
                 name={"heart"}
                 size="large"

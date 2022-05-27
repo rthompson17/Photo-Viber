@@ -111,8 +111,6 @@ export default function ProfilePage(props) {
                 <AddPostForm handleAddPost={handleAddPost} />
             </Grid.Column>
         </Grid.Row>
-        {/* <Grid.Row><br></br></Grid.Row>
-        <Grid.Row><br></br></Grid.Row> */}
         <Grid.Row>
           <Grid.Column>
             <h1>YOUR PHOTOS</h1>

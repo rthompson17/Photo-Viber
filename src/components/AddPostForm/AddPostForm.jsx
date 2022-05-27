@@ -43,6 +43,7 @@ export default function UploadProfilePicForm(props){
                             placeholder="upload image"
                             onChange={handleFileInput}
                         />
+                        {/* FOR A LATER VERSION OF THIS APP */}
                         {/* <Form.Input
                             className="form-group"
                             name="caption"
