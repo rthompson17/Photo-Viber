@@ -14,6 +14,7 @@ Images will soon be able to be rated using the buttons below the image, but this
 
 ![PV_card_ashley](https://images.squarespace-cdn.com/content/v1/5865abc3cd0f680962234f16/1653661990800-V0J1ZKM1GLORL4SRMETM/PV_card_ashley.png?format=1000w)
 
+Users can see how many "likes" they've received on each image. This will later be expanded to more detailed feedback based on the buttons on the main review page.
 
 
 # Getting Started 
