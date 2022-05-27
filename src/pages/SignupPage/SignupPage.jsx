@@ -54,6 +54,12 @@ export default function SignUpPage(props) {
     return (
       <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
         <Grid.Column style={{ maxWidth: 450 }}>
+        <Grid.Row>
+            <Grid.Column>
+              <h1>Welcome to Photo Viber</h1>
+              <h2>Find out which photos are best to use for your dating app profile.</h2>
+              </Grid.Column>
+              </Grid.Row>
           <Header as="h1" color="teal" textAlign="center">
             Sign Up
           </Header>
