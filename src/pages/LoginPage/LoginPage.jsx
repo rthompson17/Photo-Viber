@@ -49,6 +49,12 @@ export default function LoginPage(props) {
         verticalAlign="middle"
         >
         <Grid.Column style={{ maxWidth: 450 }}>
+          <Grid.Row>
+            <Grid.Column>
+              <h1>Welcome to Photo Viber</h1>
+              <h2>Find out which photos are best to use for your dating app profile.</h2>
+              </Grid.Column>
+              </Grid.Row>
           <Header as="h2" color="blue" textAlign="center">
             {/* <Image src="" /> */}
              Log in to your account
