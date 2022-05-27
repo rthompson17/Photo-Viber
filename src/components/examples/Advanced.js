@@ -73,7 +73,7 @@ function Advanced ({posts, addLike}) {
         rel='stylesheet'
       /><br></br><br></br>
       <h1>Photo Viber</h1>
-      <h2>Not sure which photos to use for your dating apps?<br></br> Get honest feedback from real people. </h2>
+      <h2>Help people choose their dating app photos.<br></br> Get honest feedback from real people. </h2>
       <br></br>
       <div className='cardContainer'>
         {posts.map((character, index) => (
@@ -96,11 +96,11 @@ function Advanced ({posts, addLike}) {
       </div>
       <br></br>
       <div className='buttons'>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')} title="Don't Use">&#x274C;</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Hot">&#128293;</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Aww">&#128522;</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Good Trouble">&#128520;</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Bae">&#128141;</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')} title="Don't Use">BAD VIBES<br></br>&#x274C;</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Hot">HOT<br></br>&#128293;</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Aww">CUTE<br></br>&#128522;</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Sweet">SWEET<br></br>&#10084;</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Good Vibes">GOOD VIBES<br></br>&#128175;</button>
       </div>
       <div className='buttons2'>
         <button style={{ backgroundColor: !canGoBack && '#bfc3f0' }} onClick={() => goBack()}>Undo Swipe</button>

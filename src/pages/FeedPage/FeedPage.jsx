@@ -111,12 +111,12 @@ return (
             </div>
                     {/* TINDER EXAMPLE END */}
         </Grid.Row>
-        <Grid.Row><h2>Check out and "like" your favorite photos from other users!</h2></Grid.Row>
+        <Grid.Row><h2>Browse and "like" your favorite photos from other users!</h2></Grid.Row>
         <Grid.Row>
-            <Grid.Column style={{ maxWidth: 450 }}>
+            <Grid.Column style={{ maxWidth: 650 }}>
                 <PostFeed
                   posts={posts}
-                  numPhotosCol={3}
+                  numPhotosCol={5}
                   isProfile={false}
                   loading={loading}
                   addLike={addLike}

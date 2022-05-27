@@ -39,7 +39,7 @@ export default function UploadProfilePicForm(props){
                             className="form-group"
                             type="file"
                             name="photo"
-                            label="NEW PHOTO TEST"
+                            label="ADD A PHOTO TO HAVE REVIEWED"
                             placeholder="upload image"
                             onChange={handleFileInput}
                         />
