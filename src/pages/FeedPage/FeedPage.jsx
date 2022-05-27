@@ -12,7 +12,7 @@ import Simple from '../../components/examples/Simple'
 import * as postsAPI from "../../utils/postApi";
 import * as likesAPI from "../../utils/likeApi"
 
-import { Grid } from "semantic-ui-react"
+import { Grid, GridRow } from "semantic-ui-react"
 
 export default function Feed({user, handleLogout}) {
     console.log(postsAPI, " <-- this is the postsAPI")
@@ -99,9 +99,10 @@ return (
                 <PageHeader handleLogout={handleLogout} user={user}/>
             </Grid.Column>
         </Grid.Row>
+        <GridRow></GridRow>
         <Grid.Row>
              <div className='app'>
-             {showAdvanced ? <Advanced posts={posts}/> : <Simple />}
+             {showAdvanced ? <Advanced posts={posts} addLike={addLike}/> : <Simple />}
              {/* <div className='row'>
               <p style={{ color: '#fff' }}>Show advanced example</p> 
               <Switch checked={showAdvanced} onChange={setShowAdvanced} 
@@ -110,11 +111,12 @@ return (
             </div>
                     {/* TINDER EXAMPLE END */}
         </Grid.Row>
+        <Grid.Row><h2>Check out and "like" your favorite photos from other users!</h2></Grid.Row>
         <Grid.Row>
-            <Grid.Column style={{ maxWidth: 500 }}>
+            <Grid.Column style={{ maxWidth: 450 }}>
                 <PostFeed
                   posts={posts}
-                  numPhotosCol={5}
+                  numPhotosCol={3}
                   isProfile={false}
                   loading={loading}
                   addLike={addLike}

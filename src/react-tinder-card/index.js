@@ -128,18 +128,21 @@ const mouseCoordinatesFromEvent = (e) => {
   return { x: e.clientX, y: e.clientY }
 }
 
-const TinderCard = React.forwardRef(({ flickOnSwipe = true, children, onSwipe, onCardLeftScreen, className, preventSwipe = [] }, ref) => {
+const TinderCard = React.forwardRef(({ flickOnSwipe = true, children, addLike, onSwipe, onCardLeftScreen, className, preventSwipe = [] }, ref) => {
   const swipeAlreadyReleased = React.useRef(false)
 
   const element = React.useRef()
 
-  React.useImperativeHandle(ref, () => ({
+  React.useImperativeHandle(ref, () => ({ 
     async swipe (dir = 'right') {
+      console.log(ref, '<--- this is ref')
       if (onSwipe) onSwipe(dir)
       const power = 1000
       const disturbance = (Math.random() - 0.5) * 100
       if (dir === 'right') {
         await animateOut(element.current, { x: power, y: disturbance }, true)
+        console.log(addLike, ref, '< -- this is addLike and ref')
+        addLike(ref._id)
       } else if (dir === 'left') {
         await animateOut(element.current, { x: -power, y: disturbance }, true)
       } else if (dir === 'up') {

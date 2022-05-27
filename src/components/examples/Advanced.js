@@ -1,8 +1,9 @@
 import React, { useState, useMemo, useRef } from 'react'
 import TinderCard from 'react-tinder-card'
 
+
 //posts comes from FeedPage
-function Advanced ({posts, likeId}) {
+function Advanced ({posts, addLike}) {
   const [currentIndex, setCurrentIndex] = useState(posts.length - 1)
   const [lastDirection, setLastDirection] = useState()
   // used for outOfFrame closure
@@ -28,6 +29,7 @@ function Advanced ({posts, likeId}) {
   // set last direction and decrease current index
   const swiped = (direction, nameToDelete, index) => {
     setLastDirection(direction)
+    console.log(direction)
     updateCurrentIndex(index - 1)
   }
 
@@ -42,6 +44,9 @@ function Advanced ({posts, likeId}) {
 
   const swipe = async (dir) => {
     if (canSwipe && currentIndex < posts.length) {
+      if (dir === 'right') {
+        // addLike(ref._id)
+      }
       await childRefs[currentIndex].current.swipe(dir) // Swipe the card!
     }
   }
@@ -68,12 +73,14 @@ function Advanced ({posts, likeId}) {
         rel='stylesheet'
       /><br></br><br></br>
       <h1>Photo Viber</h1>
+      <h2>Not sure which photos to use for your dating apps?<br></br> Get honest feedback from real people. </h2>
       <br></br>
-      {/* <div className='cardContainer'>
+      <div className='cardContainer'>
         {posts.map((character, index) => (
           <TinderCard
             ref={childRefs[index]}
             className='swipe'
+            addLike={addLike}
             key={character.name}
             onSwipe={(dir) => swiped(dir, character.name, index)}
             onCardLeftScreen={() => outOfFrame(character.name, index)}
@@ -86,27 +93,27 @@ function Advanced ({posts, likeId}) {
             </div>
           </TinderCard>
         ))}
-      </div> */}
+      </div>
       <br></br>
-      {/* <div className='buttons'>
+      <div className='buttons'>
         <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')} title="Don't Use">&#x274C;</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')} title="Hot">&#128293;</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Hot">&#128293;</button>
         <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Aww">&#128522;</button>
         <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Good Trouble">&#128520;</button>
         <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Bae">&#128141;</button>
       </div>
       <div className='buttons2'>
         <button style={{ backgroundColor: !canGoBack && '#bfc3f0' }} onClick={() => goBack()}>Undo Swipe</button>
-      </div> */}
-      {/* {lastDirection ? (
+      </div>
+      {lastDirection ? (
         <h2 key={lastDirection} className='infoText'>
-          You swiped {lastDirection}
+          You swiped {lastDirection}!
         </h2>
       ) : (
         <h2 className='infoText'>
           Swipe a card or press a button!
         </h2>
-      )} */}
+      )}
     </div>
   )
 }
