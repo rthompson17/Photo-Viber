@@ -1,37 +1,43 @@
-## Setup 
+![PV_header](https://images.squarespace-cdn.com/content/v1/5865abc3cd0f680962234f16/1653661992333-V5MDKVZF6GUUIYJGBLIO/PV_title.png?format=2500w) 
 
-1. Clone the repo
-2. Rename the folder to your Project, you can use the `mv` command like `mv mern-boilerplate yourprojectname`
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+Photo Viber is a full stack MERN application created to help people choose better photos for their dating app profiles. Users can upload photos to be reviewed, and can also review the photos of other users.
 
 
-#### Setup your git repo
 
-1. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-2. Then you can run the following commands in the root of your project 
+![PV_signup](https://images.squarespace-cdn.com/content/v1/5865abc3cd0f680962234f16/1653661991906-H30UUA6YV707ZXSIRM36/PV_signup.png?format=2500w) 
 
-```
-git init
-git add .
-git commit -m "first commit"
-git remote add origin git@git.generalassemb.ly:SEI-CC/test.git // this will be whatever your address will be, look at the address in the code github gives you!
-git push -u origin main
-```
+Users can sign up to create a new account and upload a profile photo. Once signed up, they can view other user images to review, and they can also upload their own images for other user to review.
 
-#### Setup the App
+![PV_home_john](https://images.squarespace-cdn.com/content/v1/5865abc3cd0f680962234f16/1653661991361-YRX7ZGLDQL7TOGYMSNYK/PV_home_john.png?format=2500w) 
 
-```npm install```
+Images will soon be able to be rated using the buttons below the image, but this feature is still in development. In the meantime, users can "like" the images by browsing the image cards below the main swipe image deck. 
 
-*DOTENV*
+![PV_card_ashley](https://images.squarespace-cdn.com/content/v1/5865abc3cd0f680962234f16/1653661990800-V0J1ZKM1GLORL4SRMETM/PV_card_ashley.png?format=1000w)
 
-`touch .env`
 
-add your variables
 
-```
-DATABASE_URL=mongodb://localhost:27017/testagramV2
-BUCKET_NAME=catcollectorone
-SECRET=mysecretforjwt
-```
+# Getting Started 
+- Explore the app here: https://photoviber.herokuapp.com/
+- Trello Board: https://trello.com/invite/b/sx2QWWCe/4544ba1021a5120d8fc0f416bccb0019/project-4-photo-viber
+- Initial Wireframes” https://www.figma.com/files/team/1101964647901187578/Cosmos-App 
 
-The app is configured, to use those respective key names for the database, jwt secret and aws bucket, of course you'll have your own values
+
+
+# Technologies used
+- MongoDB/Mongoose
+- Express
+- React
+- Node
+
+
+# Next Steps
+This app is currently a work in progress. Future modifications include:
+
+- Enabling full functionality of the swipe feature
+- Breaking down the review options into more detailed feedback on each image
+- Creating a social or chat element to the app so that users can communicate with one another
+- Possibly expanding the app's functionality into a dating app
+
+
+# Photography Attribution
+- User images by Ryann Thompson and Ry Marie Images 
