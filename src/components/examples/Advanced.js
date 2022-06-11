@@ -3,7 +3,7 @@ import TinderCard from 'react-tinder-card'
 
 
 //posts comes from FeedPage
-function Advanced ({posts, addLike}) {
+function Advanced ({posts, addLike, removeLike}) {
   const [currentIndex, setCurrentIndex] = useState(posts.length - 1)
   const [lastDirection, setLastDirection] = useState()
   // used for outOfFrame closure
@@ -45,8 +45,11 @@ function Advanced ({posts, addLike}) {
   const swipe = async (dir) => {
     if (canSwipe && currentIndex < posts.length) {
       if (dir === 'right') {
-        // addLike(ref._id)
+        addLike(posts[currentIndex]._id)
       }
+      // if (dir === 'left') {
+      //   removeLike(posts[currentIndex]._id)
+      // }
       await childRefs[currentIndex].current.swipe(dir) // Swipe the card!
     }
   }
@@ -80,7 +83,7 @@ function Advanced ({posts, addLike}) {
           <TinderCard
             ref={childRefs[index]}
             className='swipe'
-            addLike={addLike}
+            // addLike={addLike}
             key={character.name}
             onSwipe={(dir) => swiped(dir, character.name, index)}
             onCardLeftScreen={() => outOfFrame(character.name, index)}

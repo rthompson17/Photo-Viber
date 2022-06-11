@@ -10,7 +10,7 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
     );
 
     const clickHandler = 
-      likeIndex > -1
+      likeIndex > 0
         ? () => removeLike(post.likes[likeIndex]._id)
         : () => addLike(post._id);
 
@@ -48,6 +48,11 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
               
             <Icon
                 name={"heart"}
+                size="large"
+                color={likeColor} onClick={clickHandler}
+            />
+            <Icon
+                name={"fire"}
                 size="large"
                 color={likeColor} onClick={clickHandler}
             />

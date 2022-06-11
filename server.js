@@ -26,6 +26,9 @@ app.use("/api/users", require("./routes/api/users"));
 app.use('/api/posts', require('./routes/api/posts'));
 app.use('/api', require('./routes/api/likes'));
 
+app.get("/tacos", function(req, res) {
+  res.send("Ding dongz");
+});
 
 // "catch all" route
 app.get("/*", function (req, res) {

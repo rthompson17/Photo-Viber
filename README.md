@@ -20,6 +20,7 @@ Users can see how many "likes" they've received on each image. This will later b
 # Getting Started 
 - Explore the app here: https://photoviber.herokuapp.com/login
 - Trello Board: https://trello.com/invite/b/sx2QWWCe/4544ba1021a5120d8fc0f416bccb0019/project-4-photo-viber
+- To run this project from terminal command line, use nodemon server.js and npm start
 
 
 

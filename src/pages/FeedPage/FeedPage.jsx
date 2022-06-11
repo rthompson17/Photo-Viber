@@ -102,7 +102,7 @@ return (
         <GridRow></GridRow>
         <Grid.Row>
              <div className='app'>
-             {showAdvanced ? <Advanced posts={posts} addLike={addLike}/> : <Simple />}
+             {showAdvanced ? <Advanced posts={posts} addLike={addLike} /> : <Simple />}
              {/* <div className='row'>
               <p style={{ color: '#fff' }}>Show advanced example</p> 
               <Switch checked={showAdvanced} onChange={setShowAdvanced} 
@@ -116,7 +116,7 @@ return (
             <Grid.Column style={{ maxWidth: 650 }}>
                 <PostFeed
                   posts={posts}
-                  numPhotosCol={5}
+                  numPhotosCol={4}
                   isProfile={false}
                   loading={loading}
                   addLike={addLike}
