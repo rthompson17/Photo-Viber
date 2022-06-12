@@ -10,7 +10,7 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
     );
 
     const clickHandler = 
-      likeIndex > 0
+      likeIndex > -1
         ? () => removeLike(post.likes[likeIndex]._id)
         : () => addLike(post._id);
 
