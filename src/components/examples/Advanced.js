@@ -71,7 +71,7 @@ function Advanced ({posts, addLike}) {
       <link
         href='https://fonts.googleapis.com/css?family=Alatsi&display=swap'
         rel='stylesheet'
-      /><br></br><br></br>
+      />
       <h1>Photo Viber</h1>
       <h2>Help people choose their dating app photos.<br></br> Get honest feedback from real people. </h2>
       <br></br>

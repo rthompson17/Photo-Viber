@@ -47,7 +47,7 @@
   min-height: auto;
   overflow: hidden;
   /* background: linear-gradient(#fff, #999); */
-  background: linear-gradient(#e8eeff, #a2bddf);
+  background: linear-gradient(#a2bddf, #e8eeff);
 }
 
 #root>div {
