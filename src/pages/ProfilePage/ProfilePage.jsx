@@ -130,6 +130,20 @@ export default function ProfilePage(props) {
           </Grid.Row>
           <Grid.Row><br></br></Grid.Row>
         <Grid.Row><br></br></Grid.Row>
+        <h1>POSTS YOU'VE LIKED</h1>
+         <Grid.Row>
+            <Grid.Column style={{ maxWidth: 650 }}>
+                <PostFeed
+                  posts={posts}
+                  numPhotosCol={4}
+                  isProfile={false}
+                  loading={loading}
+                  addLike={addLike}
+                  removeLike={removeLike}
+                  user={user}
+                />
+            </Grid.Column>
+        </Grid.Row>
         <Grid.Row><br></br></Grid.Row>
         <Grid.Row><br></br></Grid.Row>
       </Grid>

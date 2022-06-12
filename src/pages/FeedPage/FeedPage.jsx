@@ -112,7 +112,7 @@ return (
                     {/* TINDER EXAMPLE END */}
         </Grid.Row>
         <Grid.Row><h2>Browse and "like" your favorite photos from other users!</h2></Grid.Row>
-        <Grid.Row>
+        {/* <Grid.Row>
             <Grid.Column style={{ maxWidth: 650 }}>
                 <PostFeed
                   posts={posts}
@@ -124,7 +124,7 @@ return (
                   user={user}
                 />
             </Grid.Column>
-        </Grid.Row>
+        </Grid.Row> */}
     </Grid>
   );
 }

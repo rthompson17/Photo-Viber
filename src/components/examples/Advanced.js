@@ -102,10 +102,10 @@ function Advanced ({posts, addLike}) {
         <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Sweet">SWEET<br></br>&#10084;</button>
         <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Good Vibes">GOOD VIBES<br></br>&#128175;</button>
       </div>
-      <div className='buttons2'>
+      {/* <div className='buttons2'>
         <button style={{ backgroundColor: !canGoBack && '#bfc3f0' }} onClick={() => goBack()}>Undo Swipe</button>
-      </div>
-      {lastDirection ? (
+      </div> */}
+      {/* {lastDirection ? (
         <h2 key={lastDirection} className='infoText'>
           You swiped {lastDirection}!
         </h2>
@@ -113,7 +113,7 @@ function Advanced ({posts, addLike}) {
         <h2 className='infoText'>
           Swipe a card or press a button!
         </h2>
-      )}
+      )} */}
     </div>
   )
 }
