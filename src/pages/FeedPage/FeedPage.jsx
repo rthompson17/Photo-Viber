@@ -102,7 +102,7 @@ return (
         <GridRow></GridRow>
         <Grid.Row>
              <div className='app'>
-             {showAdvanced ? <Advanced posts={posts} addLike={addLike} /> : <Simple />}
+             {showAdvanced ? <Advanced posts={posts} addLike={addLike} removeLike={removeLike}/> : <Simple />}
              {/* <div className='row'>
               <p style={{ color: '#fff' }}>Show advanced example</p> 
               <Switch checked={showAdvanced} onChange={setShowAdvanced} 

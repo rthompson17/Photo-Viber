@@ -29,6 +29,11 @@ async function deleteLike(req, res){
         await post.save()
         res.json({data: 'like removed'})
     } catch(err){
-        res.status(400).json({err})
+        res.status(400).json({err});
     }
 }
+
+// need to modify how these functions work because it currently requires that a 
+// user id be assoicated with a "like" before that like can be deleted
+
+// OR just remove the "removeLike" functionality for a left swipe and leave it as no vote
