@@ -7,8 +7,6 @@ import userService from '../../utils/userService';
 import FeedPage from '../FeedPage/FeedPage'; 
 import ProfilePage from '../ProfilePage/ProfilePage';
 // import Switch from 'react-ios-switch'
-// import Advanced from './examples/Advanced'
-// import Simple from './examples/Simple'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

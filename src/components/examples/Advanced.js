@@ -95,12 +95,13 @@ function Advanced ({posts, addLike}) {
         ))}
       </div>
       <br></br>
+      <br></br>
       <div className='buttons'>
         <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')} title="Don't Use">BAD VIBES<br></br>&#x274C;</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Hot">HOT<br></br>&#128293;</button>
+        {/* <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Hot">HOT<br></br>&#128293;</button>
         <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Aww">CUTE<br></br>&#128522;</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Sweet">SWEET<br></br>&#10084;</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Good Vibes">GOOD VIBES<br></br>&#128175;</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Sweet">SWEET<br></br>&#10084;</button> */}
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')} title="Good Vibes">GOOD VIBES<br></br>&#10084;</button>
       </div>
       {/* <div className='buttons2'>
         <button style={{ backgroundColor: !canGoBack && '#bfc3f0' }} onClick={() => goBack()}>Undo Swipe</button>
