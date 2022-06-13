@@ -74,7 +74,7 @@ function Advanced ({posts, addLike}) {
       />
       <h2>Help people choose their dating app photos.<br></br> Get honest feedback from real people. </h2>
       <br></br>
-      <div className='cardContainer'>
+      <div className='tinderCardContainer'>
         {posts.map((character, index) => (
           <TinderCard
             ref={childRefs[index]}
@@ -86,7 +86,7 @@ function Advanced ({posts, addLike}) {
           >
             <div
               style={{ backgroundImage: 'url(' + character.photoUrl + ')' }}
-              className='card'
+              className='tinderCard'
             >
               <h3>{character.user.username}</h3>
             </div>

@@ -115,13 +115,13 @@ export default function ProfilePage(props) {
           <Grid.Column>
             <h1>YOUR PHOTOS</h1>
            </Grid.Column>
-        </Grid.Row>
-          <Grid.Row centered>
+        </Grid.Row >
+          <Grid.Row centered >
             <Grid.Column style={{ maxWidth: 750 }}>
             <PostFeed
                 isProfile={true}
                 posts={posts}
-                numPhotosCol={3}
+                numPhotosCol={7}
                 user={props.user}
                 addLike={addLike}
                 removeLike={removeLike}
@@ -132,7 +132,7 @@ export default function ProfilePage(props) {
         <Grid.Row><br></br></Grid.Row>
         <h1>POSTS YOU'VE LIKED</h1>
          <Grid.Row>
-            <Grid.Column style={{ maxWidth: 650 }}>
+            <Grid.Column>
                 <PostFeed
                   posts={posts}
                   numPhotosCol={4}

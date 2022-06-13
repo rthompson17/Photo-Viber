@@ -8,19 +8,19 @@ export default function PageHeader({ user, handleLogout }) {
     <>
       <Header as="h2">
         <nav class="navbar navbar-lg">
+        <Link to="/"> 
+          <img class="mx-auto d-block" width="300px" src="https://catcollector-ry.s3.amazonaws.com/photo-viber-logo-wh-2.png" alt="https://catcollector-ry.s3.amazonaws.com/photo-viber-logo-wh-2.png"/>
+        </Link>
         <Link to={`/${user?.username}`}>
           <Image class="rounded-circle"
-            width="100px"
+            width="70px"
             src={
               user?.photoUrl
                 ? user?.photoUrl
                 : "https://react.semantic-ui.com/images/wireframe/square-image.png"
             }
           ></Image>
-        </Link> 
-        <Link to="/"> 
-          <img class="mx-auto d-block" width="300px" src="https://catcollector-ry.s3.amazonaws.com/photo-viber-logo-wh-2.png" alt="https://catcollector-ry.s3.amazonaws.com/photo-viber-logo-wh-2.png"/>
-        </Link>   
+        </Link>    
           <div> 
           {/* <Link to="/">
             Home
