@@ -37,6 +37,17 @@
   }
 }
 
+.container {
+  background-color: #a2bddf;
+}
+
+/* @media screen and (max-width: 950px) {
+  .container>img.mx-auto {
+    width: 90vw;
+    max-width: 200px;
+    height: auto;
+  }
+} */
 /* // CSS FROM TINDER EXAMPLE BELOW ///////////////////// */
 
 #root {
@@ -47,7 +58,7 @@
   min-height: auto;
   overflow: hidden;
   /* background: linear-gradient(#fff, #999); */
-  background: linear-gradient(#a2bddf, #e8eeff);
+  background: linear-gradient(#a2bddf, #a2bddf);
 }
 
 #root>div {
@@ -88,8 +99,8 @@ h2 {
 
 .cardContainer {
   width: 90vw;
-  max-width: 600px;
-  height: 600px;
+  max-width: 500px;
+  height: 500px;
 }
 
 @media screen and (max-width: 950px) {
@@ -104,8 +115,8 @@ h2 {
   position: relative;
   background-color: #fff;
   width: 80vw;
-  max-width: 600px;
-  height: 600px;
+  max-width: 500px;
+  height: 500px;
   box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.10);
   border-radius: 40px;
   background-size: cover;

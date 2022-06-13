@@ -9,6 +9,7 @@ import Advanced from '../../components/examples/Advanced'
 import showAdvanced from '../../components/examples/Advanced'
 import setShowAdvanced from '../../components/examples/Advanced'
 import Simple from '../../components/examples/Simple'
+import Footer from "../../components/Footer/Footer"
 import * as postsAPI from "../../utils/postApi";
 import * as likesAPI from "../../utils/likeApi"
 
@@ -124,6 +125,9 @@ return (
                 />
             </Grid.Column>
         </Grid.Row> */}
+                <GridRow></GridRow>
+                <GridRow>© 2022 Photo Viber. All Rights Reserved. </GridRow>
+
     </Grid>
   );
 }

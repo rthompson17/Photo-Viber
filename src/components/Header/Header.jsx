@@ -9,7 +9,7 @@ export default function PageHeader({ user, handleLogout }) {
       <Header as="h2">
         <nav class="navbar navbar-lg">
         <Link to={`/${user?.username}`}>
-          <Image
+          <Image class="rounded-circle"
             width="100px"
             src={
               user?.photoUrl
@@ -19,7 +19,7 @@ export default function PageHeader({ user, handleLogout }) {
           ></Image>
         </Link> 
         <Link to="/"> 
-          <img class="mx-auto d-block" width="600px" src="https://catcollector-ry.s3.amazonaws.com/photo-viber-logo-wh-2.png" alt="https://catcollector-ry.s3.amazonaws.com/photo-viber-logo-wh-2.png"/>
+          <img class="mx-auto d-block" width="300px" src="https://catcollector-ry.s3.amazonaws.com/photo-viber-logo-wh-2.png" alt="https://catcollector-ry.s3.amazonaws.com/photo-viber-logo-wh-2.png"/>
         </Link>   
           <div> 
           {/* <Link to="/">
