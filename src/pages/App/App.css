@@ -50,6 +50,10 @@
 } */
 /* // CSS FROM TINDER EXAMPLE BELOW ///////////////////// */
 
+img.ui.image>.rounded-circle {
+  border-radius: 50%!important;
+}
+
 #root {
   text-align: center;
   display:absolute;
@@ -220,6 +224,7 @@ h2 {
 
 .buttons button:hover {
   transform: scale(1.05);
+  background-color:  #51a8ad;
 }
 
 @keyframes popup {

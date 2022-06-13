@@ -121,7 +121,7 @@ export default function ProfilePage(props) {
             <PostFeed
                 isProfile={true}
                 posts={posts}
-                numPhotosCol={7}
+                numPhotosCol={4}
                 user={props.user}
                 addLike={addLike}
                 removeLike={removeLike}
@@ -129,7 +129,7 @@ export default function ProfilePage(props) {
             </Grid.Column>
           </Grid.Row>
           <Grid.Row><br></br></Grid.Row>
-        <Grid.Row><br></br></Grid.Row>
+        {/* <Grid.Row><br></br></Grid.Row>
         <h1>POSTS YOU'VE LIKED</h1>
          <Grid.Row>
             <Grid.Column>
@@ -143,7 +143,7 @@ export default function ProfilePage(props) {
                   user={user}
                 />
             </Grid.Column>
-        </Grid.Row>
+        </Grid.Row> */}
         <Grid.Row><br></br></Grid.Row>
         <Grid.Row><br></br></Grid.Row>
       </Grid>

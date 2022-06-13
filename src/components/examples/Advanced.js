@@ -57,9 +57,6 @@ function Advanced ({posts, addLike}) {
     const newIndex = currentIndex + 1
     updateCurrentIndex(newIndex)
     await childRefs[newIndex].current.restoreCard()
-
-  
-  
   }
 
   return (
@@ -72,10 +69,16 @@ function Advanced ({posts, addLike}) {
         href='https://fonts.googleapis.com/css?family=Alatsi&display=swap'
         rel='stylesheet'
       />
-      <h2>Help people choose their dating app photos.<br></br> Get honest feedback from real people. </h2>
+      <div className='cardUserName'>
+        <br></br>
+      <h3>What kind of vibes would you get from this dating app photo?</h3>
+      <br></br>
+      </div>
+
       <br></br>
       <div className='tinderCardContainer'>
-        {posts.map((character, index) => (
+        {posts.map((character, index, user, username) => (
+          
           <TinderCard
             ref={childRefs[index]}
             className='swipe'
