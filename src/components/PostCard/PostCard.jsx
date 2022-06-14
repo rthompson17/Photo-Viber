@@ -2,7 +2,6 @@ import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-// SHOULD ENABLE A SWIPE RIGHT OR LEFT FOR ADD OR REMOVE LIKE
 
 function PostCard({ post, isProfile, removeLike, addLike, user }) {
     const likeIndex = post.likes.findIndex(
@@ -16,6 +15,11 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
 
     const likeColor = likeIndex > -1 ? "red" : "grey";
     // const likeColor2 = likeIndex > 5 ? "red" : "grey";
+
+    console.log(post.likes.length, '<-- this is LIKE TOTAL per card')
+    // for each post's total number of likes -- {post.likes.length}
+    // find the total of all post likes for a user (to get their total number of likes)
+
 
     return (
         <Card key={post._id} raised>

@@ -4,7 +4,20 @@ import PostCard from '../PostCard/PostCard';
 import Loader from '../Loader/Loader';
 
 export default function PostFeed({posts, numPhotosCol, isProfile, loading, addLike, removeLike, user }){
-console.log(posts)
+console.log(posts, '<-- this is posts')
+
+// for each post's total number of likes -- {post.likes.length}
+// find the total of all post likes for a user (to get their total number of likes) --- HINT: use reduce method??
+// display "total likes" in the PostFeed which is part of the ProfilePage
+// then lift state to display "new likes" it in the NAVBAR of each user
+
+    // const initialValue = 0;
+    // const sumLikes = posts[post.likes.length].reduce(
+    //     (previousValue, currentValue) => previousValue + currentValue,
+    //     initialValue
+    // )
+
+
     return (
         <Card.Group itemsPerRow={numPhotosCol} stackable>
             {loading ? (
