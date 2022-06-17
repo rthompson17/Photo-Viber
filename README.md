@@ -1,4 +1,4 @@
-![PV_header](https://images.squarespace-cdn.com/content/v1/5865abc3cd0f680962234f16/1653661992333-V5MDKVZF6GUUIYJGBLIO/PV_title.png?format=2500w) 
+![PV_header](https://catcollector-ry.s3.amazonaws.com/pv_title.png) 
 
 Photo Viber is a full stack MERN application created to help people choose better photos for their dating app profiles. Users can upload photos to be reviewed, and can also review the photos of other users.
 
