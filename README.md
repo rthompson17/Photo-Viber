@@ -13,7 +13,7 @@ Users can sign up to create a new account and upload a profile photo. Once signe
 
 ![PV_upload](https://catcollector-ry.s3.amazonaws.com/pv_upload.png) 
 
-A user's profile page will also display the images they've uploaded that have been rated by other users. They can use this feedback to determine which of their photos receive the most likes.
+A user's profile page will also display the images they've uploaded that have been rated by other users. They can use this feedback to determine which of their photos receive the most likes. (If they have liked their own image from the stack, they will see a red heart on that image in their profile. Otherwise, the heart will be gray.)
 
 
 ![PV_profile](https://catcollector-ry.s3.amazonaws.com/pv_profile_ry.png) 
@@ -37,6 +37,8 @@ This will later be expanded to more detailed feedback based on the buttons on th
 This app is currently a work in progress! Future modifications include:
 
 - Breaking down the review options into more detailed feedback on each image
+- Tab that displays the images they've liked and disabling the ability for a user to rate their own images
+- "New Likes" counter in the navigation of a user upon login
 - Creating a social or chat element to the app so that users can communicate with one another
 - Possibly expanding the app's functionality into a full dating app
 
