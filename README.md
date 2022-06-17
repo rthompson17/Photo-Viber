@@ -3,7 +3,7 @@
 Photo Viber is a simple full stack MERN application created to help people choose better photos for their dating app profiles. Users rate photos as "good vibes" or "bad vibes" and can upload their own photos to be rated.
 
 
-# User Signup 
+# User Signup and Profile
 
 ![PV_signup](https://catcollector-ry.s3.amazonaws.com/pv_signup.png) 
 
@@ -11,7 +11,12 @@ Users can sign up to create a new account and upload a profile photo. Once signe
 
 ![PV_home_peter](https://catcollector-ry.s3.amazonaws.com/pv_home_peter.png) 
 
-![PV_home_peter](https://catcollector-ry.s3.amazonaws.com/pv_upload.png) 
+![PV_upload](https://catcollector-ry.s3.amazonaws.com/pv_upload.png) 
+
+A user's profile page will also display the images they've uploaded that have been rated by other users. They can use this feedback to determine which of their photos receive the most likes.
+
+
+![PV_profile](https://catcollector-ry.s3.amazonaws.com/pv_profile_ry.png) 
 
 
 # Rating an Image
