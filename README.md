@@ -23,7 +23,7 @@ To rate an image, users can either swipe the photo left for "bad vibes" or right
 # Likes Counter from Swipe 
 When a user swipes right on an image or clicks the "good vibes" button on another user's photo, that user will be able to see that they're received a new like on that image.
 
-![PV_card_ry](https://catcollector-ry.s3.amazonaws.com/card_likes_ry.png)
+![PV_card_ry](https://catcollector-ry.s3.amazonaws.com/pv_card_likes_ry.png)
 
 This will later be expanded to more detailed feedback based on the buttons on the main review page.
 
