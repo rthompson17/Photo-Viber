@@ -71,10 +71,10 @@ function Advanced ({posts, addLike}) {
       />
       <div className='cardUserName'>
         <br></br>
-      <h3>What kind of vibes would you get from this dating app photo?</h3>
+      <h3>Rate the vibes of dating app photos. Upload your own photos for feedback.</h3>
       <br></br>
       </div>
-
+      <br></br>
       <br></br>
       <div className='tinderCardContainer'>
         {posts.map((character, index, user, username) => (

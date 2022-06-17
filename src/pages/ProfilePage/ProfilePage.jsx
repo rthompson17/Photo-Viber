@@ -34,6 +34,8 @@ export default function ProfilePage(props) {
         }
     }
 
+  
+
     async function removeLike(likeId){
         try {
             const data = await likesAPI.removeLike(likeId);
@@ -113,7 +115,7 @@ export default function ProfilePage(props) {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <h1>YOUR PHOTOS</h1>
+            <h1>YOUR RATED PHOTOS</h1>
            </Grid.Column>
         </Grid.Row >
           <Grid.Row centered >
